@@ -15,9 +15,19 @@ body {
 }
 
 h1 {
-    color: #d35400;
+    background: linear-gradient(90deg, #d35400, #f39c12, #e67e22);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 5s infinite linear;
     text-align: center;
+    font-weight: bold;
 }
+
+@keyframes gradientMove {
+    0% { background-position: 0% }
+    100% { background-position: 100% }
+}
+
 
 p {
     font-size: 16px;
@@ -41,6 +51,22 @@ th {
     color: white;
 }
 
+tr:hover {
+    background-color: #ffeaa7;
+    transition: background-color 0.3s ease;
+}
+
+.top-scorer {
+    background-color: #fff3e0;
+    border: 2px solid #f39c12;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #d35400;
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.3);
+}
 
 footer {
     background-color: #d35400;
@@ -52,4 +78,5 @@ footer {
     border-radius: 0 0 10px 10px;
     text-align: center;
     box-sizing: border-box;
+    color: #fff;
 }
